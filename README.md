@@ -1,3 +1,3 @@
-# Music-Player
+# Music-Player App
 # HTML, CSS & JAVASCRIPT
 ## STRING & ARRAY METHODS

@@ -1,1 +1,3 @@
 # Music-Player
+# HTML, CSS & JAVASCRIPT
+## STRING & ARRAY METHODS

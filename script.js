@@ -89,6 +89,23 @@ const allSongs = [
     songCurrentTime: 0,
   };
   
+  // Function Play Song
+  const playSong = (id) => {
+  const song = userData?.songs.find((song) => song.id === id);
+  audio.src = song.src;
+  audio.title = song.title; 
+  
+  if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
+    audio.currentTime = 0; // to start from the begining
+  } else {
+    audio.currentTime = userData?.songCurrentTime;
+  }
+  userData.currentSong = song;
+  playButton.classList.add("playing");
+
+  audio.play(); 
+  };
+
   const renderSongs = (array) => {
     const songsHTML = array
       .map((song)=> {
@@ -109,6 +126,9 @@ const allSongs = [
       .join("");
   
     playlistSongs.innerHTML = songsHTML;
+    playButton.addEventListener("click",()=>{
+      
+    });
   };
   // Arrow Function to sort The Songs in alphabetical order by title
   const sortSongs = () => {
@@ -131,4 +151,5 @@ const allSongs = [
 
 
   renderSongs(sortSongs()); // Display Songs List in alphabetical order
+
     

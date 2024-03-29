@@ -105,7 +105,14 @@ const allSongs = [
 
   audio.play(); 
   };
-
+  
+  // Function Pause Song
+  const pauseSong = () => {
+  userData.songCurrentTime = audio.currentTime;
+  playButton.classList.remove("playing");
+  audio.pause();
+  }
+  
   const renderSongs = (array) => {
     const songsHTML = array
       .map((song)=> {
@@ -127,7 +134,11 @@ const allSongs = [
   
     playlistSongs.innerHTML = songsHTML;
     playButton.addEventListener("click",()=>{
-      
+    if (userData?.currentSong === null) {
+      playSong(userData?.songs[0].id);
+    } else{
+      playSong(userData.currentSong.id);
+    }
     });
   };
   // Arrow Function to sort The Songs in alphabetical order by title

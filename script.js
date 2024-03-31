@@ -102,17 +102,19 @@ const allSongs = [
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
-
+  highlightCurrentSong();
+  setPlayerDisplay();
+  setPlayButtonAccessibleText();
   audio.play(); 
   };
   
-  // Function Pause Song
+  // Function To Pause Playing Song
   const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove("playing");
   audio.pause();
   }
-  // Function Play Next Song
+  // Function To Play Next Song
   const playNextSong = () => {
     if (userData?.currentSong === null) {
       playSong(userData?.songs[0].id);
@@ -122,7 +124,7 @@ const allSongs = [
       playSong(nextSong.id);
     }
   };
-  // Function Play Previous Song
+  // Function To Play Previous Song
   const playPreviousSong = () => {
      if (userData?.currentSong === null) return;
      else {
@@ -131,7 +133,39 @@ const allSongs = [
       playSong(previousSong.id);
      }
   };
+
+  // Function Shuffle
+  const shuffle = () => {
+    userData?.songs.sort(() => Math.random() - 0.5);
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
   
+    renderSongs(userData?.songs);
+    pauseSong();
+    setPlayerDisplay();
+    setPlayButtonAccessibleText();
+  };
+  // Function To Set Player Display
+  
+  const setPlayerDisplay = () => {
+    const playingSong = document.getElementById("player-song-title");
+    const songArtist = document.getElementById("player-song-artist");
+    const currentTitle = userData?.currentSong?.title;
+   const currentArtist = userData?.currentSong?.artist;
+
+   playingSong.textContent = currentTitle ? currentTitle : "";
+   songArtist.textContent = currentArtist ? currentArtist : "";
+  };
+  // Function to highlight any song that is being played
+  const highlightCurrentSong = () => {
+    const playlistSongElements = document.querySelectorAll(".playlist-song");
+    const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
+    playlistSongElements.forEach((songEl) => {
+      songEl.removeAttribute("aria-current");
+    });
+  
+    if (songToHighlight) songToHighlight.setAttribute("aria-current", "true");
+  };
   
   const renderSongs = (array) => {
     const songsHTML = array

@@ -238,7 +238,22 @@ const allSongs = [
     pauseButton.addEventListener("click", pauseSong);
     nextButton.addEventListener("click", playNextSong);
     previousButton.addEventListener("click", playPreviousSong);
+    shuffleButton.addEventListener("click", shuffle);
+    audio.addEventListener("ended", () => {
+      const currentSongIndex = getCurrentSongIndex();
+      const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
 
+      if (nextSongExists) {
+        playNextSong();
+      } else {
+        userData.currentSong = null;
+        userData.songCurrentTime = 0;  
+        pauseSong();
+        setPlayerDisplay();
+        highlightCurrentSong();
+        setPlayButtonAccessibleText();
+      }
+      });  
   // Arrow Function to sort The Songs in alphabetical order by title
   const sortSongs = () => {
     userData?.songs.sort((a,b) =>{
@@ -258,6 +273,5 @@ const allSongs = [
   
   };
 
-  renderSongs(sortSongs()); // Display Songs List in alphabetical order
-
-    
+  renderSongs(sortSongs());// Display Songs List in alphabetical order.
+  setPlayButtonAccessibleText();

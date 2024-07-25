@@ -1,5 +1,4 @@
-# Music-Player App
-# HTML, CSS & JAVASCRIPT
-## STRING & ARRAY METHODS :
+# Music Player App
+# Key Concepts : 
 ### String And Array Methods
 ### (find), forEach(), join()

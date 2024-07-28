@@ -1,4 +1,6 @@
 # Music Player App
-# Key Concepts : 
+## Key Concepts : 
 ### String And Array Methods
-### find(), forEach(), join()
+### find()
+### forEach()
+### join()

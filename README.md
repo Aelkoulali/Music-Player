@@ -1,5 +1,5 @@
 # 🗂️ Music Player App 🎧🎵 
-A music player App buit with HTML, CSS AND JavaScript (String an Array Methods).
+A music player App buit with HTML, CSS AND JavaScript using String an Array Methods.
 
 ## ✅ Key Features
 String And Array Methods :

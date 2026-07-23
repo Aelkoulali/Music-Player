@@ -12,7 +12,7 @@ A music player App buit with HTML, CSS AND JavaScript using String an Array Meth
 ## 🛠️ Tech Stack
 - HTML
 - CSS
-- JavaScript : String & Array Methods
+- JavaScript, String & Array Methods used :
   -  `find()` (to get the selected song)
   - `forEach()` (to update UI for highlighted song)
   - `join()` (to build the playlist HTML)

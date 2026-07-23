@@ -1,7 +1,8 @@
-# 🗂️ Music Player App 🎧🎵 
-A music player App buit with HTML, CSS AND JavaScript using String an Array Methods.
+🗂️ Music Player App 🎧🎵
 
-## ✅ Key Features
+A music player app built with HTML, CSS, and JavaScript using String and Array Methods.
+
+✅ Key Features
 - Play / Pause
 - Next / Previous track
 - Shuffle
@@ -9,14 +10,17 @@ A music player App buit with HTML, CSS AND JavaScript using String an Array Meth
 - Highlights the currently playing song
 - Shows current song title and artist
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 - HTML
 - CSS
-- JavaScript, String & Array Methods used :
-  -  `find()` (to get the selected song)
-  - `forEach()` (to update UI for highlighted song)
-  - `join()` (to build the playlist HTML)
+- JavaScript
 
-## ▶️ How to Run
+🧮 String & Array Methods Used
+- `find()` (to get the selected song)
+- `forEach()` (to update UI for highlighted song)
+- `join()` (to build the playlist HTML)
+
+▶️ How to Run
 Open `index.html` in your browser.
+
 

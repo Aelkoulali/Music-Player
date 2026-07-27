@@ -1,6 +1,6 @@
 # 🗂️ Music Player App 🎧🎵
 
-A music player app built with HTML, CSS, and JavaScript using String and Array Methods.
+This Music Player App is built with HTML, CSS, and JavaScript to showcase String and Array methods. It supports play/pause, next/previous, and shuffle. The playlist is generated dynamically from track data, where users can delete songs and the app resets when the playlist is empty. During playback, it clearly shows the current song title and artist and highlights the active track for easy navigation.
 
 ## ✅ Key Features
 - Play / Pause

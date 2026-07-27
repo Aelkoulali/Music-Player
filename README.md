@@ -10,12 +10,12 @@ A music player app built with HTML, CSS, and JavaScript using String and Array M
 - Highlights the currently playing song
 - Shows current song title and artist
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 - HTML
 - CSS
 - JavaScript
 
-🧮 String & Array Methods Used
+## 🧮 String & Array Methods Used
 - `find()` (to get the selected song)
 - `forEach()` (to update UI for highlighted song)
 - `join()` (to build the playlist HTML)

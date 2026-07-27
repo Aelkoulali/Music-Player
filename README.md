@@ -1,8 +1,8 @@
-🗂️ Music Player App 🎧🎵
+# 🗂️ Music Player App 🎧🎵
 
 A music player app built with HTML, CSS, and JavaScript using String and Array Methods.
 
-✅ Key Features
+## ✅ Key Features
 - Play / Pause
 - Next / Previous track
 - Shuffle

@@ -20,7 +20,7 @@ A music player app built with HTML, CSS, and JavaScript using String and Array M
 - `forEach()` (to update UI for highlighted song)
 - `join()` (to build the playlist HTML)
 
-▶️ How to Run
-Open `index.html` in your browser.
+## ▶️ How to Run
+- Open `index.html` in your browser.
 
 
